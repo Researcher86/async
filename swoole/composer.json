@@ -1,0 +1,12 @@
+{
+    "name": "root/swoole",
+    "authors": [
+        {
+            "name": "Tanat",
+            "email": "researcher2286@gmail.com"
+        }
+    ],
+    "require": {
+        "swoole/ide-helper": "~4.8"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "root/roadrunner",
+    "authors": [
+        {
+            "name": "Tanat",
+            "email": "researcher2286@gmail.com"
+        }
+    ],
+    "require": {
+        "spiral/roadrunner": "^2.6",
+        "nyholm/psr7": "^1.4",
+        "spiral/roadrunner-jobs": "^2.0"
+    },
+    "require-dev": {
+        "spiral/roadrunner-cli": "^2.0"
+    }
+}

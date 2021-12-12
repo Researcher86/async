@@ -1,0 +1,21 @@
+#rpc:
+#  listen: tcp://127.0.0.1:6001
+#
+#jobs:
+#  consume: [ "test" ]   # List of RoadRunner queues that can be processed by
+#  # the consumer specified in the "server" section.
+#  pipelines:
+#    test:               # RoadRunner queue identifier
+#      driver: memory  # - Queue driver name
+#      queue: test       # - Internal (driver's) queue identifier
+
+server:
+#  command: "php consumer.php"
+  command: "php worker.php"
+
+http:
+  address: 0.0.0.0:9502
+#  workers:
+#    command: "php worker.php"
+  pool:
+    num_workers: 100
