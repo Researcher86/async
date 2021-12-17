@@ -24,7 +24,7 @@ bench-swoole:
 
 # make bench-workerman
 bench-workerman:
-	wrk -c1000 -t100 -R5000 http://host.docker.internal:9504
+	wrk -c1000 -t100 -R5000 http://host.docker.internal:9503
 
 # make bench-rr
 bench-rr:
@@ -37,5 +37,9 @@ bench-node:
 # make bench-go
 bench-go:
 	wrk -c1000 -t100 -R5000 http://host.docker.internal:9505
+
+# make bench-react
+bench-react:
+	wrk -c1000 -t100 -R5000 http://host.docker.internal:9506
 
 

@@ -1,6 +1,6 @@
 <?php
 
-$http = new Swoole\Http\Server('0.0.0.0', 9501);
+$http = new Swoole\Http\Server('0.0.0.0', 9501, SWOOLE_BASE);
 $http->set(['worker_num' => 100]);
 
 $http->on('start', function ($server) {

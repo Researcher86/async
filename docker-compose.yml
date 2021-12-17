@@ -65,6 +65,23 @@ services:
         working_dir: /app
         command: php index.php start
 
+    react-php:
+        build:
+            context: .
+            dockerfile: react-php/Dockerfile
+        environment:
+            - COMPOSER_ALLOW_SUPERUSER=true
+            - XDEBUG_CONFIG=client_host=host.docker.internal start_with_request=trigger
+            - XDEBUG_MODE=of
+            - XDEBUG_SESSION=PHPSTORM
+            - PHP_IDE_CONFIG=serverName=react
+        ports:
+            -   "9506:9506"
+        volumes:
+            -   ./react-php:/app
+        working_dir: /app
+        command: php index.php
+
     node:
         build:
             context: .
