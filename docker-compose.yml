@@ -75,3 +75,12 @@ services:
             -   ./nodejs:/app
         working_dir: /app
         command: node index.js
+
+    go:
+        image: ubuntu:jammy
+        ports:
+            - "9505:9505"
+        volumes:
+            - ./go:/app
+        working_dir: /app
+        command: ./main

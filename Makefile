@@ -1,7 +1,7 @@
 build:
 	docker-compose build
 
-up:
+up: build-go
 	docker-compose up
 
 down:
@@ -13,11 +13,14 @@ swoole-go:
 rr-go:
 	docker-compose run --rm rr bash
 
+# make build-go
+build-go:
+	cd go && go build main.go
+
 # make bench-swoole
 bench-swoole:
     # https://github-wiki-see.page/m/giltene/wrk2/wiki/Installing-wrk2-on-Linux#:~:text=Installing%20wrk2%20on,wrk%20and%20build.
 	wrk -c1000 -t100 -R5000 http://host.docker.internal:9501
-
 
 # make bench-workerman
 bench-workerman:
@@ -30,5 +33,9 @@ bench-rr:
 # make bench-node
 bench-node:
 	wrk -c1000 -t100 -R5000 http://host.docker.internal:9504
+
+# make bench-go
+bench-go:
+	wrk -c1000 -t100 -R5000 http://host.docker.internal:9505
 
 
