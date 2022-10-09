@@ -20,26 +20,26 @@ build-go:
 # make bench-swoole
 bench-swoole:
     # https://github-wiki-see.page/m/giltene/wrk2/wiki/Installing-wrk2-on-Linux#:~:text=Installing%20wrk2%20on,wrk%20and%20build.
-	wrk -c1000 -t100 -R5000 http://host.docker.internal:9501
+	wrk -c1000 -t100 -R5000 http://localhost:9501
 
 # make bench-workerman
 bench-workerman:
-	wrk -c1000 -t100 -R5000 http://host.docker.internal:9503
+	wrk -c1000 -t100 -R5000 http://localhost:9503
 
 # make bench-rr
 bench-rr:
-	wrk -c1000 -t100 -R5000 http://host.docker.internal:9502
+	wrk -c1000 -t100 -R5000 http://localhost:9502
 
 # make bench-node
 bench-node:
-	wrk -c1000 -t100 -R5000 http://host.docker.internal:9504
+	wrk -c2000 -t200 -R5000 http://localhost:9504
 
 # make bench-go
 bench-go:
-	wrk -c1000 -t100 -R5000 http://host.docker.internal:9505
+	wrk -c1000 -t100 -R5000 http://localhost:9505
 
 # make bench-react
 bench-react:
-	wrk -c1000 -t100 -R5000 http://host.docker.internal:9506
+	wrk -c1000 -t100 -R5000 http://localhost:9506
 
 
